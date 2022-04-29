@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Kalendarz</title>
+    <link rel="stylesheet" href="kalendarz.css" />
+</head>
+<body>
+        <div id="kontener">
+            <div class="naglowek">
+                <img class="logo" src="fryzjer_logo.png" width="110" />
+                <p class="miesiac"> <b id="miesiac"></b></p>
+                <div>
+                    <button class="button" id="msc_minus">Poprzedni miesiac</button>
+                    <button class="button" id="msc_plus"> Nastepny miesiac</button>
+                </div>
+            </div>
+            <div class="wiersz_dzien_tygodnia" style="height:54px;">
+
+                <div class="dzien_tygodnia">Poniedziałek</div>
+                <div class="dzien_tygodnia">Wtorek</div>
+                <div class="dzien_tygodnia">Środa</div>
+                <div class="dzien_tygodnia">Czwartek</div>
+                <div class="dzien_tygodnia">Piątek</div>
+                <div class="dzien_tygodnia">Sobota</div>
+                <div class="dzien_tygodnia">Niedziela</div>
+            </div>
+            <div id="kalendarz">
+
+            </div>
+        </div>
+
+        <div id="okienko_nowa_wizyta">
+            <h2 id="tytul_okienka"></h2>
+            <form id="formularz" onsubmit="return false">
+                <div id="godzina_wizyty">
+                </div>
+                <div id="dane">
+                    <label for="pole_imie">Imie:</label>
+                    <input type="text" name="imie" id="pole_imie" />
+
+                    <label for="pole_nazwisko">Nazwisko:</label>
+                    <input type="text" name="nazwisko" id="pole_nazwisko" />
+
+                    <label for="pole_tel">Tel.:</label>
+                    <input type="number" name="tel" id="pole_tel" />
+                </div>
+                <input type="submit" class="button" onclick="dod_wizyte();" value="Zapisz" />
+            </form>
+            <button id="anuluj" class="button">Anuluj</button>
+        </div>
+        <div id="BackDrop"></div>
+    <script src="kalendarz.js"></script>
+</body>
+</html>
